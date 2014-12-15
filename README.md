@@ -1,4 +1,4 @@
 Santa
 =====
 
-Python Script for assigning Secret Santa and emailing them out.
+Python Script for creating Secret Santa assignments and emailing them out.
