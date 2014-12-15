@@ -49,7 +49,7 @@ def get_yn(question):
             print("Please enter yes or no")
 
 
-def dearrange(arranged_list):
+def derange(arranged_list):
     # Take a list, and dearrange it so that no item is in its original place.
 
     shuffled_list = list(arranged_list)
@@ -61,7 +61,6 @@ def dearrange(arranged_list):
     while True:
         match = False
         for arranged_santa, shuffled_santa in zip(arranged_list, shuffled_list):
-            # print(arranged_santa.name, dearranged_santa.name)
             if arranged_santa == shuffled_santa:
                 match = True
         if match:
@@ -93,7 +92,7 @@ while True:
     newSanta = Santa(full_name, email_address)
     santa_list.append(newSanta)
 
-dearranged_list = dearrange(list(santa_list))
+deranged_list = derange(list(santa_list))
 
 print('\n')
 
@@ -103,9 +102,9 @@ logging.basicConfig(filename="ss.log", level=logging.DEBUG)
 print('\n')
 print("Sending emails, this may take a minute or two...")
 
-for santas, dearranged in zip(santa_list, dearranged_list):
-    santas.receiver_name = dearranged.name
-    santas.receiver_email = dearranged.email
+for santas, deranged in zip(santa_list, deranged_list):
+    santas.receiver_name = deranged.name
+    santas.receiver_email = deranged.email
 
     email_subject = "<Your Email Subject>"
     email_message = "Hello %s, Your Secret Santa is %s.  Get them an awesome present!" \
